@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/time-tracking-dashboard-s989KB44az](https://www.frontendmentor.io/solutions/time-tracking-dashboard-s989KB44az)
 - Live Site URL: [https://time-tracking-dashboard-byjo.netlify.app/](https://time-tracking-dashboard-byjo.netlify.app/)
 
 ## My process
