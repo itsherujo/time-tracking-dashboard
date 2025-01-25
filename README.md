@@ -63,5 +63,3 @@ One important lesson I learned is how to use JavaScript to dynamically update HT
 ## Author
 
 - Frontend Mentor - [@itsherujo](https://www.frontendmentor.io/profile/itsherujo)
-
-# time-tracking-dashboard
