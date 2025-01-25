@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    /* == PRIMARY COLOR === */
+    --blue: hsl(246, 80%, 60%);
+    --light-red-work: hsl(15, 100%, 70%);
+    --soft-blue-play: hsl(195, 74%, 62%);
+    --light-red-study: hsl(348, 100%, 68%);
+    --limegreen-excercise: hsl(145, 58%, 55%);
+    --violet-social: hsl(264, 64%, 52%);
+    --soft-orange-selfcare: hsl(43, 84%, 65%);
+
+    /* === Neutral === */
+    --very-dark: hsl(226, 43%, 10%);
+    --dark-blue: hsl(235, 46%, 20%);
+    --desaturated: hsl(235, 45%, 61%);
+    --pale-blue: hsl(236, 100%, 87%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--desaturated);
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 4rem;
+    font-weight: 300;
+}
+
+h3 {
+    font-weight: 400;
+    color: white;
+}
+
+h4 {
+    font-weight: 400;
+    color: var(--pale-blue);
+}
+
+body {
+    background-color: var(--very-dark);
+    font-family: "Rubik", serif;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+main {
+    margin: 0 25px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
+    row-gap: 30px;
+}
+
+.profile-box {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-row: 1 / 3;
+}
+
+.profile {
+    background-color: var(--blue);
+    padding: 30px;
+    border-radius: 15px;
+    display: grid;
+    text-align: start;
+    z-index: 2;
+}
+
+.profile img {
+    width: 4.5em;
+    border: 3px solid white;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+
+.profile p {
+    font-size: .95rem;
+    font-weight: 500;
+    color: var(--pale-blue);
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.profile h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 60px;
+}
+
+.report {
+    text-align: start;
+    background-color: var(--dark-blue);
+    padding: 40px 35px 10px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    margin-top: -15px;
+}
+
+.report li,a {
+    margin-bottom: 20px;
+}
+
+.report li,a:hover {
+    cursor: pointer;
+    color: var(--pale-blue);
+}
+
+.report li,a:focus {
+    color: white;
+}
+
+.activity {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.icon-image{
+    text-align: end;
+    overflow: hidden;
+    border-radius: 15px;
+    position: relative;
+    height: 80px;
+    z-index: -1;
+}
+
+.icon-image img {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+}
+
+.icon-image.work {
+    background-color: var(--light-red-work);
+}
+.icon-image.play {
+    background-color: var(--soft-blue-play);
+}
+.icon-image.study {
+    background-color: var(--light-red-study);
+}
+.icon-image.exercise {
+    background-color: var(--limegreen-excercise);
+}
+.icon-image.social {
+    background-color: var(--violet-social);
+}
+.icon-image.selfcare{
+    background-color: var(--soft-orange-selfcare);
+}
+
+.report-activity {
+    background-color: var(--dark-blue);
+    padding: 25px 30px;
+    margin-top: -4em;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.report-activity:hover {
+    background-color: var(--desaturated);
+    cursor: pointer;
+
+}
+
+.report-activity .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title i {
+    transform: rotate(90deg);
+    color: var(--pale-blue);
+    font-size: 1.5rem;
+}
+
+.attribution {
+    margin-top: 7rem;
+    text-align: center;
+}
+
+
+
+/* === BREAKPOINT === */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    body {
+        height: auto;
+        align-items: stretch;
+    }
+
+    main {
+        margin: 50px 25px;
+    }
+
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }
+
+    .profile-box {
+        grid-column: 1;
+    }
+
+    .activity.study {
+        grid-row: 3;
+        grid-column: 1 / 3;
+    }
+
+    .activity.selfcare {
+        grid-row: 5;
+        grid-column: 1 / 3;
+    }
+
+    .attribution {
+        margin-top: 0;
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    body {
+        height: auto;
+        align-items: stretch;
+    }
+
+    main {
+        margin: 50px 25px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .report-activity .title {
+        margin-bottom: 20px;
+    }
+
+    .attribution {
+        margin: 50px 25px;
+    }
+}
